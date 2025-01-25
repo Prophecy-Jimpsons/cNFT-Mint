@@ -1,13 +1,14 @@
-# Solana Compressed NFT Program
+# Prophecy NFT Program
 
-A Solana program that demonstrates the creation of compressed NFTs (cNFTs) using the Bubblegum standard, enabling cost-effective NFT minting through state compression.
+A Solana program that enables users to create and mint compressed NFTs (cNFTs) representing prophecies or predictions about future events. Built using the Bubblegum standard for cost-effective NFT minting through state compression.
 
-## Features
+## Overview
 
-- Creation of Merkle trees for compressed NFT storage
-- Minting of compressed NFTs with customizable metadata
-- Integration with MPL Bubblegum standard
-- Support for concurrent minting operations
+This program allows users to:
+- Create prophecies as compressed NFTs
+- Store predictions on-chain efficiently using state compression
+- Track and verify prophecy outcomes
+- Mint prophecies with customizable metadata
 
 ## Prerequisites
 
@@ -19,7 +20,7 @@ A Solana program that demonstrates the creation of compressed NFTs (cNFTs) using
 ## Installation
 
 git clone <repository-url>
-cd <repository-name>
+cd prophecy-nft
 yarn install
 text
 
@@ -35,18 +36,18 @@ text
 
 ## Program Structure
 
-**State Compression Components:**
-- Merkle Tree creation for efficient storage
+**Core Components:**
+- Merkle Tree implementation for efficient prophecy storage
 - Tree Authority PDA for permission management
-- Bubblegum program integration for cNFT operations
+- Compressed NFT minting using Bubblegum standard
 
 **Main Instructions:**
-- `create_tree`: Initializes a new Merkle tree
-- `mint_cnft`: Mints a new compressed NFT
+- `create_tree`: Sets up the Merkle tree for prophecy storage
+- `mint_prophecy`: Mints a new prophecy as a compressed NFT
 
 ## Usage Example
 
-// Create a new Merkle tree
+// Create a new Merkle tree for prophecies
 const merkleTree = generateSigner(umi);
 await createTree(umi, {
 merkleTree,
@@ -54,16 +55,16 @@ maxDepth: 14,
 maxBufferSize: 64,
 public: true,
 });
-// Mint a compressed NFT
+// Mint a prophecy as compressed NFT
 await program.methods
 .mintCnft(
-"NFT Name",
-"SYMBOL",
-"metadata_uri",
-new anchor.BN(100)
+"Trump to win election on 2024", // Prophecy title
+"TRUMP2024", // Symbol
+"metadata_uri", // Prophecy metadata URI
+new anchor.BN(100) // Additional data
 )
 .accounts({
-// ... account configuration
+// Account configuration
 })
 .instruction();
 text
@@ -84,10 +85,10 @@ text
 
 ## Key Features
 
-- **Cost Efficiency**: Utilizes state compression to reduce storage costs
-- **Scalability**: Supports high-volume NFT minting
-- **Flexibility**: Customizable metadata and minting parameters
-- **Security**: Implements proper authority checks and PDAs
+- **Cost Efficiency**: Uses state compression for affordable prophecy minting
+- **Scalability**: Supports high-volume prophecy creation
+- **Flexibility**: Customizable prophecy metadata and parameters
+- **Verification**: Built-in mechanisms for tracking prophecy outcomes
 
 ## Environment Setup
 
