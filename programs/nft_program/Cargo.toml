@@ -1,0 +1,25 @@
+[package]
+name = "nft_program"
+version = "0.1.0"
+description = "Compressed NFT Program with JIMP allocation"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "nft_program"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = { workspace = true }
+anchor-spl = { workspace = true }
+mpl-token-metadata = { workspace = true }
+solana-program = { workspace = true }
+spl-account-compression = { workspace = true, features = ["no-entrypoint"] }
+spl-noop = { workspace = true }
+mpl-bubblegum = { workspace = true }

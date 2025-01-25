@@ -1,0 +1,41 @@
+# Build output directories
+**/build/
+**/dist/
+
+# Dependencies
+node_modules/
+.npm/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Cache directories
+.cache/
+.temp/
+
+# Test coverage
+coverage/
+
+# Generated files
+*.generated.*
+.anchor/
+
+# Local development files
+target/
+test-ledger/
+
+*.key 
