@@ -22,17 +22,17 @@ This program allows users to:
 git clone <repository-url>
 cd prophecy-nft
 yarn install
-text
+
 
 ## Building the Program
 
 anchor build
-text
+
 
 ## Testing
 
 anchor test
-text
+
 
 ## Program Structure
 
@@ -48,6 +48,7 @@ text
 ## Usage Example
 
 // Create a new Merkle tree for prophecies
+
 const merkleTree = generateSigner(umi);
 await createTree(umi, {
 merkleTree,
@@ -55,7 +56,9 @@ maxDepth: 14,
 maxBufferSize: 64,
 public: true,
 });
+
 // Mint a prophecy as compressed NFT
+
 await program.methods
 .mintCnft(
 "Trump to win election on 2024", // Prophecy title
@@ -67,15 +70,17 @@ new anchor.BN(100) // Additional data
 // Account configuration
 })
 .instruction();
-text
+
 
 ## Technical Details
+
 
 **Program Dependencies:**
 - `@coral-xyz/anchor`: Solana development framework
 - `@metaplex-foundation/mpl-bubblegum`: Compression standard implementation
 - `@metaplex-foundation/umi`: Unified Metaplex Interface
 - `@solana/web3.js`: Solana web3 utilities
+
 
 **Configuration Constants:**
 const BUBBLEGUM_PROGRAM_ID = "BGUMAp9Gq7iTEuizy4pqaxsTyUCBK68MDfK752saRPUY";
@@ -94,11 +99,9 @@ text
 
 1. Configure your Solana cluster:
 solana config set --url devnet
-text
 
 2. Set up your wallet:
 solana-keygen new
-text
 
 ## Contributing
 
