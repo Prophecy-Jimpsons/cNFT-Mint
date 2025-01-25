@@ -107,11 +107,8 @@ solana-keygen new
 ## 🤝 Want to Contribute?
 
 We love contributions! Here's how:
-1. Fork it
-2. Branch it
-3. Change it
-4. Push it
-5. Pull Request it
+
+Email us at admin@jimpsons.org
 
 ## 📜 License
 
