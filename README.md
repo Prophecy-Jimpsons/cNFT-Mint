@@ -73,11 +73,11 @@ new anchor.BN(100) // Additional data
 ### Dependencies
 
 - @coral-xyz/anchor: Your Solana development companion
-- 
+  
 - @metaplex-foundation/mpl-bubblegum: Making compression magic happen
-- 
+  
 - @metaplex-foundation/umi: Unified Metaplex Interface
-- 
+  
 - @solana/web3.js: Essential Solana utilities
 
 ### Program IDs
